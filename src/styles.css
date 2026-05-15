@@ -1,34 +1,52 @@
 /* ============================================================
    MADE4IT — Design System Base
-   Baseado nas páginas: made4isp, made4flow, made4graph,
-   made4noc, made4radius, freeradius
+   Extraído do Figma: /design/Ai173ghW5yqfzI0BDf9Rro
+   Páginas: made4isp, made4flow, made4graph,
+            made4noc, made4radius, freeradius
    ============================================================ */
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Cores */
-  --bg-dark:        #050a14;
-  --bg-dark-2:      #080f1e;
-  --bg-dark-card:   #0d1627;
-  --bg-dark-card-2: #111c30;
+  /* ── Cores extraídas do Figma ── */
+  --color-navbar:      #ffffff;             /* menu: fill branco */
+  --color-hero:        #141414;             /* hero: r/g/b 0.078 */
+  --color-stats:       #000000;             /* Frame 6: preto */
+  --color-grad-start:  #162A66;             /* gradient stop 0: r:0.09 g:0.168 b:0.40 */
+  --color-grad-end:    #202020;             /* gradient stop 1: r:0.126 */
+  --color-dark-cards:  #202020;             /* serviços dark */
+  --color-video:       #2A2727;             /* Frame 10: r:0.163 g:0.154 */
+  --color-white-sec:   #ffffff;             /* serviços claro */
+  --color-form-bg:     #F4F3F3;             /* Frame 111: r:0.957 g:0.956 */
+  --color-footer-bg:   #F2F2F2;             /* Frame 95: r:0.949 */
+
+  /* ── Acento / brand ── */
   --accent-cyan:    #00d4ff;
   --accent-blue:    #0066cc;
   --accent-green:   #00c853;
+
+  /* ── Texto ── */
+  --text-dark:      #1a1a1a;
   --text-white:     #ffffff;
   --text-light:     #c8d6e8;
-  --text-muted:     #7a90aa;
+  --text-muted-dark:#6b7280;               /* sobre fundos claros */
+  --text-muted:     #7a90aa;               /* sobre fundos escuros */
+
+  /* ── Bordas ── */
   --border-subtle:  rgba(0, 212, 255, 0.15);
   --border-card:    rgba(0, 212, 255, 0.20);
+  --border-light:   #e5e7eb;
 
-  /* Tipografia */
+  /* ── Tipografia ── */
   --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
 
-  /* Espaçamentos */
-  --section-py:     80px;
-  --section-py-sm:  48px;
-  --container-max:  1200px;
+  /* ── Espaçamentos (baseados no Figma 1920px) ──
+     Figma: padding H = 315px em 1920px = 16.4%
+     Convertido para container 1200px com padding 24px ── */
+  --section-py:     72px;    /* Figma: 70-71px */
+  --section-py-sm:  44px;    /* Figma: Frame 95 padding 44V */
+  --container-max:  1290px;  /* Figma: 1920 - 2×315 = 1290px */
   --container-pad:  24px;
 }
 
@@ -77,7 +95,7 @@ ul { list-style: none; }
 }
 .btn-primary {
   background: var(--accent-cyan);
-  color: var(--bg-dark);
+  color: var(--color-dark-cards);
 }
 .btn-primary:hover { background: #00b8e0; transform: translateY(-1px); }
 
@@ -191,15 +209,32 @@ ul { list-style: none; }
   letter-spacing: 0.03em;
 }
 
-/* ---------- Seção escura vs. clara ---------- */
-.section-dark  { background: var(--bg-dark); }
-.section-dark2 { background: var(--bg-dark-2); }
-.section-light {
-  background: #f0f4fa;
-  color: #0d1627;
+/* ---------- Seções — nomes mapeados do Figma ---------- */
+/* hero */
+.section-hero     { background: var(--color-hero); color: var(--text-white); }
+/* stats bar (Frame 6) */
+.section-stats    { background: var(--color-stats); color: var(--text-white); }
+/* "made" — gradient radial (seção produto/apresentação) */
+.section-gradient {
+  background: radial-gradient(ellipse at 48% 87%, var(--color-grad-start) 0%, var(--color-grad-end) 100%);
+  color: var(--text-white);
 }
+/* "serviços" escuro — cards de features */
+.section-dark     { background: var(--color-dark-cards); color: var(--text-white); }
+/* Frame 10 — vídeo/CTA */
+.section-video    { background: var(--color-video); color: var(--text-white); }
+/* serviços claro — tabela/planos */
+.section-white    { background: var(--color-white-sec); color: var(--text-dark); }
+/* Frame 111 — formulário */
+.section-form     { background: var(--color-form-bg); color: var(--text-dark); }
+/* Frame 95 — footer */
+.section-footer   { background: var(--color-footer-bg); color: var(--text-dark); }
+
+/* aliases de compatibilidade */
+.section-dark2    { background: var(--color-dark-cards); color: var(--text-white); }
+.section-light    { background: var(--color-form-bg); color: var(--text-dark); }
 .section-light .text-body  { color: #4a5568; }
-.section-light .text-muted { color: #718096; }
+.section-light .text-muted { color: var(--text-muted-dark); }
 
 /* ---------- Grid utilities ---------- */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -248,8 +283,8 @@ ul { list-style: none; }
   position: relative;
   border-radius: 14px;
   overflow: hidden;
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-card);
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
   aspect-ratio: 16/9;
   cursor: pointer;
 }
@@ -265,21 +300,21 @@ ul { list-style: none; }
   transition: transform 0.2s;
 }
 .play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
-.play-btn svg { width: 28px; height: 28px; fill: var(--bg-dark); margin-left: 4px; }
+.play-btn svg { width: 28px; height: 28px; fill: var(--color-dark-cards); margin-left: 4px; }
 
-/* ---------- Form ---------- */
+/* ---------- Form (Frame 111 — #F4F3F3) ---------- */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-group.full { grid-column: 1 / -1; }
-.form-group label { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+.form-group label { font-size: 0.85rem; color: var(--text-muted-dark); font-weight: 500; }
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-card);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
   border-radius: 6px;
   padding: 12px 14px;
-  color: var(--text-white);
+  color: var(--text-dark);
   font-size: 0.9rem;
   font-family: var(--font-main);
   transition: border-color 0.2s;
@@ -289,52 +324,65 @@ ul { list-style: none; }
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.12);
 }
 .form-group textarea { min-height: 100px; resize: vertical; }
 @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
 
-/* ---------- Navbar ---------- */
+/* ---------- Navbar (menu — branco, 74px) ---------- */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 0 var(--container-pad);
-  height: 64px;
+  /* Figma: height=74px, paddingLeft/Right=162px, paddingTop/Bottom=24px */
+  height: 74px;
+  padding: 0 162px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(5, 10, 20, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-subtle);
+  background: var(--color-navbar);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 .navbar-logo img { height: 36px; }
-.navbar-links { display: flex; gap: 28px; }
-.navbar-links a { font-size: 0.9rem; color: var(--text-light); font-weight: 500; transition: color 0.2s; }
+.navbar-links { display: flex; gap: 28px; }               /* Figma: itemSpacing=39px */
+.navbar-links a { font-size: 0.9rem; color: var(--text-dark); font-weight: 500; transition: color 0.2s; }
 .navbar-links a:hover { color: var(--accent-cyan); }
+@media (max-width: 1200px) { .navbar { padding: 0 32px; } }
+@media (max-width: 768px)  { .navbar { padding: 0 20px; } .navbar-links { display: none; } }
 
-/* ---------- Footer ---------- */
+/* ---------- Footer (Frame 95 — #F2F2F2, 326px) ---------- */
 .footer {
-  background: var(--bg-dark-2);
-  border-top: 1px solid var(--border-subtle);
-  padding: 48px var(--container-pad) 24px;
+  background: var(--color-footer-bg);
+  border-top: 1px solid var(--border-light);
+  /* Figma: Frame95 height=326px, paddingTop/Bottom=44px, HORIZONTAL, gap=120px */
+  padding: 44px 0;
 }
 .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 40px; }
 .footer-logo { margin-bottom: 12px; height: 32px; }
-.footer-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-cyan); margin-bottom: 14px; }
+.footer-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dark); margin-bottom: 14px; font-weight: 700; }
 .footer-col li { padding: 4px 0; }
-.footer-col a { color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s; }
-.footer-col a:hover { color: var(--text-white); }
-.footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); }
+.footer-col a { color: var(--text-muted-dark); font-size: 0.875rem; transition: color 0.2s; }
+.footer-col a:hover { color: var(--text-dark); }
+.footer-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted-dark); flex-wrap: wrap; gap: 8px; }
 @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 
 /* ---------- Hero overlay ---------- */
+/* Figma: hero fill #141414 com foto por baixo */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(5,10,20,0.92) 45%, rgba(5,10,20,0.5) 100%);
+  background: linear-gradient(90deg, rgba(20,20,20,0.93) 40%, rgba(20,20,20,0.55) 100%);
 }
 .hero-overlay-center {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(5,10,20,0.7) 0%, rgba(5,10,20,0.95) 100%);
+  background: linear-gradient(180deg, rgba(20,20,20,0.65) 0%, rgba(20,20,20,0.96) 100%);
+}
+
+/* ---------- Seção gradient — arredondamento inferior ---------- */
+/* Figma: alguns "serviços" escuros têm rectangleCornerRadii bottom=90px */
+.section-dark.rounded-bottom {
+  border-radius: 0 0 90px 90px;
+  overflow: hidden;
 }
