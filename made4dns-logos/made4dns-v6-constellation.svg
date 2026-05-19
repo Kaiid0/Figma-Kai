@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 158" width="700" height="158">
+  <defs>
+    <clipPath id="c6">
+      <circle cx="278" cy="64" r="60"/>
+    </clipPath>
+  </defs>
+
+  <!-- "made" wordmark -->
+  <text x="6" y="106"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="88"
+    fill="#111111" letter-spacing="-1">made</text>
+
+  <!-- Blue circle -->
+  <circle cx="278" cy="64" r="60" fill="#1BAADE"/>
+
+  <!-- White "4" inside circle -->
+  <text x="278" y="106"
+    font-family="Impact,'Arial Black',Arial,sans-serif"
+    font-size="110" font-weight="900" font-style="italic"
+    fill="white" text-anchor="middle"
+    clip-path="url(#c6)">4</text>
+
+  <!-- ── DNS ICON: Network Constellation (DNS propagation mesh) ── -->
+  <!-- Central hub node -->
+  <circle cx="450" cy="58" r="12" fill="#1BAADE" stroke="white" stroke-width="2.5"/>
+  <circle cx="450" cy="58" r="5" fill="white"/>
+
+  <!-- Spoke nodes -->
+  <circle cx="410" cy="22" r="8" fill="#1BAADE"/>
+  <circle cx="490" cy="18" r="8" fill="#1BAADE"/>
+  <circle cx="520" cy="58" r="8" fill="#1BAADE"/>
+  <circle cx="498" cy="98" r="8" fill="#1BAADE"/>
+  <circle cx="402" cy="96" r="8" fill="#1BAADE"/>
+  <circle cx="376" cy="50" r="8" fill="#1BAADE"/>
+
+  <!-- Spoke lines from center -->
+  <line x1="441" y1="48" x2="416" y2="28" stroke="#1BAADE" stroke-width="2.5"/>
+  <line x1="458" y1="47" x2="484" y2="24" stroke="#1BAADE" stroke-width="2.5"/>
+  <line x1="462" y1="58" x2="512" y2="58" stroke="#1BAADE" stroke-width="2.5"/>
+  <line x1="457" y1="68" x2="491" y2="91" stroke="#1BAADE" stroke-width="2.5"/>
+  <line x1="440" y1="68" x2="408" y2="89" stroke="#1BAADE" stroke-width="2.5"/>
+  <line x1="438" y1="56" x2="384" y2="52" stroke="#1BAADE" stroke-width="2.5"/>
+
+  <!-- Cross-connections between spokes (mesh feel) -->
+  <line x1="410" y1="28" x2="490" y2="24" stroke="#1BAADE" stroke-width="1.5" opacity="0.6"/>
+  <line x1="490" y1="24" x2="520" y2="58" stroke="#1BAADE" stroke-width="1.5" opacity="0.6"/>
+  <line x1="520" y1="64" x2="498" y2="90" stroke="#1BAADE" stroke-width="1.5" opacity="0.6"/>
+  <line x1="402" y1="90" x2="376" y2="54" stroke="#1BAADE" stroke-width="1.5" opacity="0.6"/>
+  <line x1="410" y1="28" x2="376" y2="50" stroke="#1BAADE" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- "DNS" product name -->
+  <text x="370" y="136"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="44"
+    fill="#111111" letter-spacing="4">DNS</text>
+
+  <!-- Blue baseline -->
+  <rect x="6" y="141" width="688" height="3.5" fill="#1BAADE"/>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 158" width="700" height="158">
+  <defs>
+    <clipPath id="c2">
+      <circle cx="278" cy="64" r="60"/>
+    </clipPath>
+  </defs>
+
+  <!-- "made" wordmark -->
+  <text x="6" y="106"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="88"
+    fill="#111111" letter-spacing="-1">made</text>
+
+  <!-- Blue circle -->
+  <circle cx="278" cy="64" r="60" fill="#1BAADE"/>
+
+  <!-- White "4" inside circle -->
+  <text x="278" y="106"
+    font-family="Impact,'Arial Black',Arial,sans-serif"
+    font-size="110" font-weight="900" font-style="italic"
+    fill="white" text-anchor="middle"
+    clip-path="url(#c2)">4</text>
+
+  <!-- ── DNS ICON: Globe / World Network ── -->
+  <!-- Globe outer circle -->
+  <circle cx="440" cy="58" r="50" fill="none" stroke="#1BAADE" stroke-width="3"/>
+  <!-- Vertical center line (prime meridian) -->
+  <line x1="440" y1="8" x2="440" y2="108" stroke="#1BAADE" stroke-width="2.5"/>
+  <!-- Horizontal equator -->
+  <line x1="390" y1="58" x2="490" y2="58" stroke="#1BAADE" stroke-width="2.5"/>
+  <!-- Upper latitude arc -->
+  <path d="M 398,33 Q 440,25 482,33" fill="none" stroke="#1BAADE" stroke-width="2"/>
+  <!-- Lower latitude arc -->
+  <path d="M 398,83 Q 440,91 482,83" fill="none" stroke="#1BAADE" stroke-width="2"/>
+  <!-- Left longitude arc -->
+  <path d="M 440,8 Q 410,58 440,108" fill="none" stroke="#1BAADE" stroke-width="2"/>
+  <!-- Right longitude arc -->
+  <path d="M 440,8 Q 470,58 440,108" fill="none" stroke="#1BAADE" stroke-width="2"/>
+  <!-- Connection dots at intersections -->
+  <circle cx="440" cy="8" r="4.5" fill="#1BAADE"/>
+  <circle cx="440" cy="58" r="4.5" fill="#1BAADE"/>
+  <circle cx="440" cy="108" r="4.5" fill="#1BAADE"/>
+  <circle cx="390" cy="58" r="4.5" fill="#1BAADE"/>
+  <circle cx="490" cy="58" r="4.5" fill="#1BAADE"/>
+  <!-- Query arrow pointing to globe -->
+  <line x1="510" y1="42" x2="535" y2="22" stroke="#111111" stroke-width="3"/>
+  <polygon points="535,22 520,26 524,36" fill="#111111"/>
+
+  <!-- "DNS" product name -->
+  <text x="378" y="136"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="44"
+    fill="#111111" letter-spacing="4">DNS</text>
+
+  <!-- Blue baseline -->
+  <rect x="6" y="141" width="688" height="3.5" fill="#1BAADE"/>
+</svg>

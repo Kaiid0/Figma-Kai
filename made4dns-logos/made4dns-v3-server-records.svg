@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 158" width="700" height="158">
+  <defs>
+    <clipPath id="c3">
+      <circle cx="278" cy="64" r="60"/>
+    </clipPath>
+  </defs>
+
+  <!-- "made" wordmark -->
+  <text x="6" y="106"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="88"
+    fill="#111111" letter-spacing="-1">made</text>
+
+  <!-- Blue circle -->
+  <circle cx="278" cy="64" r="60" fill="#1BAADE"/>
+
+  <!-- White "4" inside circle -->
+  <text x="278" y="106"
+    font-family="Impact,'Arial Black',Arial,sans-serif"
+    font-size="110" font-weight="900" font-style="italic"
+    fill="white" text-anchor="middle"
+    clip-path="url(#c3)">4</text>
+
+  <!-- ── DNS ICON: Stacked Server / Zone Records ── -->
+  <!-- Server rack 1 (top) -->
+  <rect x="370" y="12" width="96" height="20" rx="4" fill="#1BAADE"/>
+  <circle cx="386" cy="22" r="5" fill="white"/>
+  <rect x="396" y="17" width="58" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="396" y="24" width="38" height="4" rx="2" fill="white" opacity="0.5"/>
+
+  <!-- Server rack 2 -->
+  <rect x="370" y="38" width="96" height="20" rx="4" fill="#1BAADE"/>
+  <circle cx="386" cy="48" r="5" fill="white"/>
+  <rect x="396" y="43" width="58" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="396" y="50" width="38" height="4" rx="2" fill="white" opacity="0.5"/>
+
+  <!-- Server rack 3 -->
+  <rect x="370" y="64" width="96" height="20" rx="4" fill="#1BAADE"/>
+  <circle cx="386" cy="74" r="5" fill="white"/>
+  <rect x="396" y="69" width="58" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="396" y="76" width="38" height="4" rx="2" fill="white" opacity="0.5"/>
+
+  <!-- Server rack 4 -->
+  <rect x="370" y="90" width="96" height="20" rx="4" fill="#1BAADE"/>
+  <circle cx="386" cy="100" r="5" fill="white"/>
+  <rect x="396" y="95" width="58" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="396" y="102" width="38" height="4" rx="2" fill="white" opacity="0.5"/>
+
+  <!-- Query arrow (right side) pointing into stack -->
+  <line x1="502" y1="38" x2="536" y2="22" stroke="#111111" stroke-width="3"/>
+  <polygon points="536,22 520,28 526,38" fill="#111111"/>
+  <!-- Response arrow out -->
+  <line x1="502" y1="78" x2="540" y2="98" stroke="#1BAADE" stroke-width="3"/>
+  <polygon points="540,98 525,90 530,102" fill="#1BAADE"/>
+
+  <!-- "DNS" product name -->
+  <text x="388" y="136"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="44"
+    fill="#111111" letter-spacing="4">DNS</text>
+
+  <!-- Blue baseline -->
+  <rect x="6" y="141" width="688" height="3.5" fill="#1BAADE"/>
+</svg>

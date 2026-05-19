@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 158" width="700" height="158">
+  <defs>
+    <clipPath id="c5">
+      <circle cx="278" cy="64" r="60"/>
+    </clipPath>
+  </defs>
+
+  <!-- "made" wordmark -->
+  <text x="6" y="106"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="88"
+    fill="#111111" letter-spacing="-1">made</text>
+
+  <!-- Blue circle -->
+  <circle cx="278" cy="64" r="60" fill="#1BAADE"/>
+
+  <!-- White "4" inside circle -->
+  <text x="278" y="106"
+    font-family="Impact,'Arial Black',Arial,sans-serif"
+    font-size="110" font-weight="900" font-style="italic"
+    fill="white" text-anchor="middle"
+    clip-path="url(#c5)">4</text>
+
+  <!-- ── DNS ICON: Zone File / Record Bars (like made4flow but with record type labels) ── -->
+  <!-- Horizontal baseline for bars -->
+  <line x1="362" y1="112" x2="560" y2="112" stroke="#1BAADE" stroke-width="2"/>
+
+  <!-- Bar 1: A record (tall) -->
+  <rect x="368" y="22" width="22" height="90" rx="2" fill="#1BAADE"/>
+  <text x="379" y="118" font-family="Arial" font-size="8" font-weight="700" fill="#111111" text-anchor="middle">A</text>
+
+  <!-- Bar 2: AAAA record -->
+  <rect x="396" y="38" width="22" height="74" rx="2" fill="#1BAADE"/>
+  <text x="407" y="118" font-family="Arial" font-size="7" font-weight="700" fill="#111111" text-anchor="middle">AAAA</text>
+
+  <!-- Bar 3: MX record -->
+  <rect x="424" y="52" width="22" height="60" rx="2" fill="#1BAADE"/>
+  <text x="435" y="118" font-family="Arial" font-size="8" font-weight="700" fill="#111111" text-anchor="middle">MX</text>
+
+  <!-- Bar 4: CNAME record -->
+  <rect x="452" y="44" width="22" height="68" rx="2" fill="#1BAADE"/>
+  <text x="463" y="118" font-family="Arial" font-size="7" font-weight="700" fill="#111111" text-anchor="middle">CNAME</text>
+
+  <!-- Bar 5: TXT record -->
+  <rect x="480" y="62" width="22" height="50" rx="2" fill="#1BAADE"/>
+  <text x="491" y="118" font-family="Arial" font-size="8" font-weight="700" fill="#111111" text-anchor="middle">TXT</text>
+
+  <!-- Bar 6: NS record -->
+  <rect x="508" y="32" width="22" height="80" rx="2" fill="#1BAADE"/>
+  <text x="519" y="118" font-family="Arial" font-size="8" font-weight="700" fill="#111111" text-anchor="middle">NS</text>
+
+  <!-- Bar 7: PTR record (shorter) -->
+  <rect x="536" y="70" width="22" height="42" rx="2" fill="#1BAADE"/>
+  <text x="547" y="118" font-family="Arial" font-size="8" font-weight="700" fill="#111111" text-anchor="middle">PTR</text>
+
+  <!-- "DNS" product name -->
+  <text x="372" y="136"
+    font-family="'Arial Narrow','Impact',Arial,sans-serif"
+    font-weight="900" font-style="italic" font-size="44"
+    fill="#111111" letter-spacing="4">DNS</text>
+
+  <!-- Blue baseline -->
+  <rect x="6" y="141" width="688" height="3.5" fill="#1BAADE"/>
+</svg>
